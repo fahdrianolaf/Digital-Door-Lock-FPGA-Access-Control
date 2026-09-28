@@ -1,0 +1,89 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Tue Jan 20 13:36:34 2026
+| Host         : PC202010000057-COMP04 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file doorlock5_control_sets_placed.rpt
+| Design       : doorlock5
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    25 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    11 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              48 |           19 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              36 |           11 |
+| Yes          | No                    | No                     |              97 |           24 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              34 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------+--------------------------+------------------+----------------+--------------+
+|  Clock Signal  |          Enable Signal         |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------------------+--------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | error_indicator_i_1_n_0        | trigger_correct08_out    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | override_indicator             | trigger_correct08_out    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | p_4_in                         |                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG |                                | trigger_correct08_out    |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | new_password_part1[15]_i_1_n_0 |                          |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG | segment_awal[15]_i_1_n_0       |                          |                2 |             16 |         8.00 |
+|  clk_IBUF_BUFG |                                | blink_counter[0]_i_1_n_0 |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | beep_count                     |                          |                7 |             32 |         4.57 |
+|  clk_IBUF_BUFG | kode_bagian2[15]_i_1_n_0       |                          |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | timer_val[0]_i_2_n_0           | timer_val[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG |                                |                          |               19 |             48 |         2.53 |
++----------------+--------------------------------+--------------------------+------------------+----------------+--------------+
+
+

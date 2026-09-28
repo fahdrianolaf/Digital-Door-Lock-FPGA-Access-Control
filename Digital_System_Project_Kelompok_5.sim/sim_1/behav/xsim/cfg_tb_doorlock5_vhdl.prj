@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../doorlockmichael.srcs/sources_1/new/doorlock5.vhd" \
+"../../../../doorlockmichael.srcs/sim_1/new/doorlock5.vhd" \
+
+# Do not sort compile order
+nosort
